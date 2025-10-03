@@ -1,0 +1,23 @@
+[
+  {
+    "name": "John Smith",
+    "age": 25,
+    "city": "London",
+    "hobbies": [
+      "Tea",
+      "Hiking"
+    ],
+    "is_studying": true
+  },
+  {
+    "name": "Jan Novák",
+    "age": 30,
+    "city": "Prague",
+    "hobbies": [
+      "Hiking",
+      "Reading",
+      "Music"
+    ],
+    "is_studying": false
+  }
+]

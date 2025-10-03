@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/kataermakova/Desktop/PRC_CS/output/PRC1_ukol'
+relocations:     []
+...

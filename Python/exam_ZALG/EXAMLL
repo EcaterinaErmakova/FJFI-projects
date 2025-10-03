@@ -1,0 +1,84 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Create a LinkedList class
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def is_empty(self): 
+        return self.head is None  
+    def append(self, data):
+        new_element=Node(data)
+        if self.is_empty():
+            self.head=new_element 
+            self.tail=new_element 
+        else:
+            self.tail.next=new_element
+            self.tail=new_element
+    def __str__(self):
+    #instance using print()
+    #return string to be printed or print directly 
+        result='[ '
+        elementy = self.head
+        while(elementy):
+            result+=str(elementy.data)+", "
+            elementy = elementy.next
+        result+="]"
+        print(result)
+        return result
+
+    def selectionSort(self): 
+        temp = self.head
+        # Traverse the List 
+        while (temp): 
+            minn = temp 
+            r = temp.next
+            # Traverse the unsorted sublist 
+            while (r): 
+                if (minn.data < r.data): 
+                    minn = r 
+                r = r.next
+            # Swap Data 
+            x = temp.data 
+            temp.data = minn.data 
+            minn.data = x 
+            temp = temp.next
+    # Method to add a node at begin of LL
+'''    def insertAtBegin(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        else:
+            new_node.next = self.head
+            self.head = new_node'''
+
+    
+    
+'''     def insertAtIndex(self, data, index):
+        if (index == 0):
+            self.insertAtBegin(data)
+        position = 0
+        current_node = self.head
+        while (current_node != None and position+1 != index):
+            position = position+1
+            current_node = current_node.next
+        if current_node != None:
+            new_node = Node(data)
+            new_node.next = current_node.next
+            current_node.next = new_node
+        else:
+            print("Index not present")'''
+
+    
+
+List = [int(x) for x in input("Zadejte posloupnost cisel pres mezery: ").split()]
+Lin_List=LinkedList()
+for i in List:
+    Lin_List.append(i)
+
+Lin_List.selectionSort()
+Lin_List.__str__()

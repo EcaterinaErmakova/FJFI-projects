@@ -1,0 +1,2 @@
+class Slovnik:
+    def __init__(self):
